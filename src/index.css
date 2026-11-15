@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme {
+  /* Paleta Arcana nocturna */
+  --color-fondo: #14111f;
+  --color-superficie: #221c35;
+  --color-profundo: #191529;
+  --color-texto: #ede7f6;
+  --color-suave: #a69ec0;
+  --color-arcano: #7c4dff;
+  --color-boton: #6a3df0;
+  --color-boton-hover: #5a2fd9;
+  --color-oro: #e0b84f;
+  --color-hechizo: #3fb8af;
+  --color-peligro: #f87171;
+
+  --font-titulo: "Cinzel", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+
+  --animate-pop: pop 0.25s ease-out;
+
+  @keyframes pop {
+    0% {
+      transform: scale(0.95);
+      opacity: 0.7;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+}
+
+@layer base {
+  html,
+  body {
+    @apply bg-fondo text-texto font-sans overflow-x-hidden;
+  }
+}
